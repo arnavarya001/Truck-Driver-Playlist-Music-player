@@ -1,0 +1,14 @@
+{
+  "name": "truck-driver-playlist-server",
+  "version": "1.0.0",
+  "description": "Audio streaming proxy server for Truck Driver Playlist / Horn OK Please Radio",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "@distube/ytdl-core": "^4.13.5",
+    "cors": "^2.8.5",
+    "express": "^4.19.2"
+  }
+}

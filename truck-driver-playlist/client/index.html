@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ट्रक वाला - Horn OK Please Radio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- DYNAMIC BACKGROUND LAYER -->
+  <div class="bg-overlay" id="bg-overlay"></div>
+
+  <!-- Hidden Container for YouTube Player -->
+  <div class="hidden-player-host">
+    <div id="yt-player-target"></div>
+    <audio id="horn-audio" src="https://www.soundjay.com/transportation/sounds/truck-horn-1.mp3" preload="auto"></audio>
+  </div>
+
+  <div class="top-bar">
+    <div id="clock">12:00 am</div>
+    <div class="counter-pill">
+      <div class="dot"></div>
+      <span>764 on the highway</span>
+    </div>
+  </div>
+
+  <div class="main-stage">
+    <h1 class="site-title">ट्रक वाला</h1>
+    <div class="sub-title">HORN OK PLEASE RADIO</div>
+  </div>
+
+  <div class="slogan-box">
+    <div class="slogan-text">मालिक की गाड़ी, ड्राइवर का पसीना, चलती है रोड पर बन कर हसीना। ↵</div>
+  </div>
+
+  <div class="truck-container" onclick="playTruckHorn()" title="Blow Horn">
+    <svg viewBox="0 0 300 150" style="width:100%;">
+      <rect x="10" y="40" width="180" height="70" rx="4" fill="#2a9d8f"/>
+      <rect x="20" y="50" width="160" height="10" fill="#e9c46a"/>
+      <path d="M 190 60 L 240 60 Q 260 60 260 80 L 260 110 L 190 110 Z" fill="#e63946"/>
+      <circle cx="230" cy="75" r="12" fill="#ffffff"/>
+      <circle cx="230" cy="75" r="8" fill="#2b2d42"/>
+      <rect x="10" y="105" width="250" height="8" fill="#1d3557"/>
+      <circle cx="50" cy="118" r="16" fill="#2b2d42"/>
+      <circle cx="170" cy="118" r="16" fill="#2b2d42"/>
+      <circle cx="230" cy="118" r="16" fill="#2b2d42"/>
+    </svg>
+  </div>
+
+  <!-- GLASS PLAYER BAR -->
+  <div class="player-bar">
+    <div class="album-art">
+      <img id="track-cover" src="https://images.unsplash.com/photo-1614613535308-eb5fbd3d2c17?auto=format&fit=crop&w=200&q=80" alt="Cover">
+    </div>
+
+    <div class="player-info">
+      <div class="current-title" id="track-title">Wafa Na Raas Aayee Tujhe O Harjae...</div>
+      <div class="current-artist" id="track-artist">Nitin Mukesh</div>
+
+      <div class="progress-container">
+        <div class="progress-bar-bg" onclick="seekVideo(event)">
+          <div class="progress-bar-fill" id="progress-fill"></div>
+        </div>
+        <div class="time-stamps" id="time-display">0:00 / 0:00</div>
+      </div>
+    </div>
+
+    <div class="controls">
+      <button class="btn-icon btn-shuffle" onclick="toggleShuffle()" title="Shuffle">🔀</button>
+      <button class="btn-icon" onclick="prevTrack()" title="Previous">⏮</button>
+      <button class="btn-icon btn-play" id="btn-play" onclick="togglePlay()" title="Play/Pause">▶</button>
+      <button class="btn-icon" onclick="nextTrack()" title="Next">⏭</button>
+      <button class="btn-icon" onclick="nextTrack()" title="Playlist Queue">≡+</button>
+    </div>
+  </div>
+
+  <script src="https://www.youtube.com/iframe_api"></script>
+  <script src="app.js"></script>
+</body>
+</html>
